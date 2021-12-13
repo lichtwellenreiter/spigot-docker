@@ -1,7 +1,7 @@
 FROM debian
 LABEL maintainer="Florian Thiévent <hi@thievent.org>"
 
-#RUN apt-get update
+RUN apt-get update
 RUN apt-get install -y openjdk-17-jdk ca-certificates-java
 RUN apt-get install -y ant
     
