@@ -1,17 +1,15 @@
 FROM debian
 LABEL maintainer="Florian Thiévent <hi@thievent.org>"
 
-RUN apt-get update
-RUN apt-get install -y openjdk-17-jdk
+#RUN apt-get update
+RUN apt-get install -y openjdk-17-jdk ca-certificates-java
 RUN apt-get install -y ant
     
 # Fix certificate issues
-RUN apt-get update
-RUN apt-get install ca-certificates-java
 RUN update-ca-certificates -f
 
 # Setup JAVA_HOME -- useful for docker commandline
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
+ENV JAVA_HOME /usr/lib/jvm/jdk-17/
 RUN export JAVA_HOME
 
 
