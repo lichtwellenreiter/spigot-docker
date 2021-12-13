@@ -1,5 +1,5 @@
-FROM java:8
-MAINTAINER John Paul Alcala jp@jpalcala.com
+FROM java:17
+MAINTAINER Florian Thiévent hi@thievent.org
 
 # grab gosu for easy step-down from root
 RUN gpg --keyserver pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 \
