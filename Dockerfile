@@ -1,4 +1,4 @@
-FROM java:17
+FROM openjdk:17
 MAINTAINER Florian Thiévent hi@thievent.org
 
 # grab gosu for easy step-down from root
